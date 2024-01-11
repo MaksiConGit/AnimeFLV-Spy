@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Registro AnimeFLV",
+    "version": "1.0",
+    "permissions": [
+      "tabs",
+      "storage",
+      "webNavigation"
+    ],
+    "host_permissions": [
+      "https://www3.animeflv.net/*/"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www3.animeflv.net/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
